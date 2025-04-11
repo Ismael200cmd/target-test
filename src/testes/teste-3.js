@@ -29,8 +29,13 @@ async function analisarFaturamento() {
             }
         }
 
-        console.log(`Menor valor de faturamento: ${menorFaturamento}`);
-        console.log(`Maior valor de faturamento: ${maiorFaturamento}`);
+        // A função toFixed formata o valor para ter duas casas decimais e arredonda o resultado.
+        console.log(
+            `Menor valor de faturamento: ${menorFaturamento.toFixed(2)}`
+        );
+        console.log(
+            `Maior valor de faturamento: ${maiorFaturamento.toFixed(2)}`
+        );
         console.log(`Dias com faturamento acima da média: ${diasAcimaMedia}`);
     } catch (error) {
         console.error("Erro ao ler o arquivo JSON:", error);
